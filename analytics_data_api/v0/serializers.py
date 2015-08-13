@@ -326,3 +326,8 @@ class UserProfileSerializer(serializers.ModelSerializer):
             'year_of_birth',
             'level_of_education',
         )
+
+
+class UserProblemWeeklyDataSerializer(serializers.ModelSerializer):
+    class Meta(object):
+        model = models.UserProblemWeeklyData
