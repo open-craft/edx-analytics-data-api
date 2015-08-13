@@ -222,6 +222,21 @@ class UserProfile(models.Model):
         db_table = 'user_profile'
 
 
+class UserProblemWeeklyData(models.Model):
+    """ User problem history per week """
+    week_ending = models.DateField()
+    course_id = models.CharField(max_length=255)
+    user_id = models.IntegerField()
+    problem_id = models.CharField(max_length=255)
+    num_attempts = models.IntegerField()
+    most_recent_score = models.IntegerField()
+    max_score = models.IntegerField()
+
+    class Meta(object):
+        db_table = 'user_problem_weekly_data'
+        ordering = ('week_ending',)
+
+
 class BaseVideo(models.Model):
     """ Base video model. """
     pipeline_video_id = models.CharField(db_index=True, max_length=255)

@@ -338,3 +338,10 @@ class UserProfileSerializer(serializers.ModelSerializer):
             'year_of_birth',
             'level_of_education',
         )
+
+
+class UserProblemWeeklyDataSerializer(serializers.ModelSerializer):
+    week_ending = serializers.DateField(format=settings.DATE_FORMAT)
+
+    class Meta(object):
+        model = models.UserProblemWeeklyData

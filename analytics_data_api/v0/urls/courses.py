@@ -15,6 +15,7 @@ COURSE_URLS = [
     ('problems', views.ProblemsListView, 'problems'),
     ('typology', views.TypologyListView, 'typology'),
     ('users', views.UserListView, 'users'),
+    (r'users/(?P<user_id>\d+)/problem_data', views.UserProblemWeeklyDataView, 'user_problem_weekly_data'),
     ('videos', views.VideosListView, 'videos'),
 ]
 
