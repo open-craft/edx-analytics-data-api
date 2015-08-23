@@ -4,6 +4,7 @@ from analytics_data_api.v0.views import users as views
 
 USER_URLS = [
     (r'^(?P<username>[^/]+)/$', views.UserProfileView, 'user_profile'),
+    (r'^(?P<username>[^/]+)/grades/$', views.UserGradesView, 'user_grades'),
 ]
 
 urlpatterns = []
