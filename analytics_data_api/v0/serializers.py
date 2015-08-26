@@ -329,5 +329,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
 
 class UserProblemWeeklyDataSerializer(serializers.ModelSerializer):
+    week_ending = serializers.DateField(format=settings.DATE_FORMAT)
+
     class Meta(object):
         model = models.UserProblemWeeklyData
