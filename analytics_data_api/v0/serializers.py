@@ -161,6 +161,23 @@ class GradeDistributionSerializer(ModelSerializerWithCreatedField):
         )
 
 
+class StudentGradeSerializer(ModelSerializerWithCreatedField):
+    """
+    Representation of the StudentGrade table without id
+    """
+
+    class Meta(object):
+        model = models.GradeDistribution
+        fields = (
+            'course_id',
+            'user_id',
+            'letter_grade',
+            'percent_grade',
+            'is_passing',
+            'created',
+        )
+
+
 class SequentialOpenDistributionSerializer(ModelSerializerWithCreatedField):
     """
     Representation of the sequential_open_distribution table without id
