@@ -167,7 +167,7 @@ class StudentGradeSerializer(ModelSerializerWithCreatedField):
     """
 
     class Meta(object):
-        model = models.GradeDistribution
+        model = models.StudentGrade
         fields = (
             'course_id',
             'user_id',
