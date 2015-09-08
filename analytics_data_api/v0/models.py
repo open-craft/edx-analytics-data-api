@@ -159,7 +159,7 @@ class CourseGradeBreakdown(models.Model):
     letter_grade = models.CharField(max_length=64, null=True)
     num_students = models.IntegerField(null=False)
     percent_students = models.FloatField()
-    is_passing = models.BooleanField(null=False)
+    is_passing = models.BooleanField(null=False, default=False)
     created = models.DateTimeField(auto_now_add=True)
 
 
@@ -187,7 +187,7 @@ class StudentGrade(models.Model):
     user_id = models.IntegerField(db_index=True)
     letter_grade = models.CharField(max_length=64, null=True)
     percent_grade = models.FloatField()
-    is_passing = models.BooleanField(null=False)
+    is_passing = models.BooleanField(null=False, default=False)
     created = models.DateTimeField(auto_now_add=True)
 
 
